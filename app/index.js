@@ -4,24 +4,23 @@ import 'whatwg-fetch';
 const one = document.getElementById('one');
 const two = document.getElementById('two');
 
+function oneShow() {
+  one.style.display = 'block';
+  two.style.display = 'none';
+}
 
-function alert() {
+function twoShow() {
   one.style.display = 'none';
   two.style.display = 'block';
 }
 
-one.onmouseover = alert;
-
-function show() {
-  two.style.display = 'none';
-  one.style.display = 'block';
-}
-
-two.onmouseout = show;
+one.onmouseover = twoShow;
+two.onmouseout = oneShow;
 
 
 const modal = document.querySelector('.modal');
-modal.style.display = 'none';
+
+
 //
 // const picBox = document.querySelectorAll('.pic-box');
 // picBox.addEventListener('click', () => {
