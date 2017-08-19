@@ -10,11 +10,24 @@ function alert() {
   two.style.display = 'block';
 }
 
-one.onclick = alert;
+one.onmouseover = alert;
 
 function show() {
   two.style.display = 'none';
   one.style.display = 'block';
 }
 
-two.onclick = show;
+two.onmouseout = show;
+
+
+const modal = document.querySelector('.modal');
+modal.style.display = 'none';
+//
+// const picBox = document.querySelectorAll('.pic-box');
+// picBox.addEventListener('click', () => {
+//   modal.style.display = 'block';
+// }, true);
+//
+// Array.from(picBox).forEach(() => {
+//   modal.classList.toggle('click');
+// });
