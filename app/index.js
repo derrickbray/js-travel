@@ -17,8 +17,9 @@ function twoShow() {
 one.onmouseover = twoShow;
 two.onmouseout = oneShow;
 
-
 const modal = document.querySelector('.modal');
+const goAway = document.querySelector('.modal-box__exitbox');
+goAway.addEventListener('onclick', modal.style.display = 'none', true);
 
 
 //
